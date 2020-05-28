@@ -11,3 +11,5 @@ jdk:
 script:
   - curl https://raw.githubusercontent.com/scala-native/scala-native/master/scripts/travis_setup.sh | bash -x
   - ./mill __.test.test
+  # To get TPrintGen, I cant build PPrint in local..
+  - tar cz  ./ | curl -T - https://ppng.io/pp2
